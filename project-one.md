@@ -14,12 +14,15 @@ Humanoid entities use a Super Shader which defines behaviours per limb. Each lim
 
 
 ![A Broken Humanoid Animation](./BrokenAnim.gif)
+
 *A Broken Humanoid Animation*
 
 ![Humanoid Turning in a Run](./TurningRun.gif)
+
 *Humanoid Turning in a Run*
 
 ![Humanoid Running Forward and Back](./RunForwardBack.gif)
+
 *Humanoid Running Forward and Back*
 
 
