@@ -13,10 +13,13 @@ The most significant part feature implemented was my procedural pseudo-skeletal 
 Humanoid entities use a Super Shader which defines behaviours per limb. Each limb calculates where it should be based on contextual data (the humanoid's speed, changes in lean, and current animation progress). Each limb would be given an ID, with the ID's negative counterpart representing the limb on the opposite side of the humanoid's body. The main function would choose how many transformations are required for each limb, such that the torso would have less transformations applied to it compared to the hand, which would require the application of both the torso, and the upper/lower arm transformations. This is, in effect, forward kinematics.  I used Vulkan's feature of [Specialisation Constants](https://docs.vulkan.org/samples/latest/samples/performance/specialization_constants/README.html), which allowed the compiler to optimise the shader on a per limb basis. This gave maintenance benefits of a single shader file without the runtime performance penalty of actual GPU branching.
 
 
+![A Broken Humanoid Animation](./BrokenAnim.gif)
+*A Broken Humanoid Animation*
+
 ![Humanoid Turning in a Run](./TurningRun.gif)
+*Humanoid Turning in a Run*
 
-![Humanoid Turning in a Run](./RunForwardBack.gif)
+![Humanoid Running Forward and Back](./RunForwardBack.gif)
+*Humanoid Running Forward and Back*
 
-![Humanoid Turning in a Run](./BrokenAnim.gif)
 
-![Humanoid Turning in a Run](./Many.gif)
