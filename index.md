@@ -17,5 +17,5 @@ I hope that you enjoy what you see. If you don't, check in later and I'll likely
 
 ## Projects
 
-* **[Terminus](./project-one.md)**,a Vulkan Renderer/Game Engine
+* **[Terminus](./project-one.md)**, a Vulkan Renderer/Game Engine
 * **[Game Jams](./project-two.md)**
