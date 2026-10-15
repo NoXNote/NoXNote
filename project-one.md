@@ -91,11 +91,27 @@ Using Newton's laws of restitution, as well as help from [internet resources](ht
 
 ## Gameplay
 
+![Variety of player movement](./move.gif)
+
+*Variety of player movement*
+
 I created a [player movement system that facilitates running, jumping and crouching. These behaviours can intersect with each other](https://github.com/NoXNote/PublicTerminus/blob/7be432fa7488a52bbb5f260c82cce51765105949/src/systems/rengb_player_system.cpp#L113-L302).
+
+![Shooting Enemies](./sparks.gif)
+
+*Shooting Enemies*
 
 The player is able to [aim down sights, shoot](https://github.com/NoXNote/PublicTerminus/blob/7be432fa7488a52bbb5f260c82cce51765105949/src/systems/rengb_player_system.cpp#L305-L456), [hit enemies to produce sparks](https://github.com/NoXNote/PublicTerminus/blob/7be432fa7488a52bbb5f260c82cce51765105949/src/systems/rengb_projectile_system.cpp), and [break the enemy into pieces](https://github.com/NoXNote/PublicTerminus/blob/7be432fa7488a52bbb5f260c82cce51765105949/src/systems/rengb_detritus_system.cpp).
 
+![Weapon Switching](./twoguns.gif)
+
+*Weapon Switching*
+
 The player is able to [switch between weapons](https://github.com/NoXNote/PublicTerminus/blob/7be432fa7488a52bbb5f260c82cce51765105949/src/systems/rengb_player_system.cpp#L34-L111), each with their own unique purpose. Weapon data is serialised and loaded from JSON. E.G, [Dual Minigun](https://github.com/NoXNote/PublicTerminus/blob/7be432fa7488a52bbb5f260c82cce51765105949/data/minigun2.json) and [Max-Cannon](https://github.com/NoXNote/PublicTerminus/blob/7be432fa7488a52bbb5f260c82cce51765105949/data/maximumCannon2.json).
+
+![Regaining Resources](./ammo.gif)
+
+*Regaining Resources*
 
 The player has separate pools for health, shields, and ammo. These can be [recovered over time](https://github.com/NoXNote/PublicTerminus/blob/7be432fa7488a52bbb5f260c82cce51765105949/src/systems/rengb_player_system.cpp#L447-L454) or [through pickups](https://github.com/NoXNote/PublicTerminus/blob/7be432fa7488a52bbb5f260c82cce51765105949/src/systems/rengb_pickup_system.cpp). These are displayed to the player through an [interface that occupies 3D space](https://github.com/NoXNote/PublicTerminus/blob/7be432fa7488a52bbb5f260c82cce51765105949/src/systems/rengb_gui_system.cpp).
 
