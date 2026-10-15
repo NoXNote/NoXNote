@@ -118,11 +118,15 @@ The player has separate pools for health, shields, and ammo. These can be [recov
 ## What I learned
 The purpose of this project was to learn, with a side goal of created an entertaining experience. I quickly discovered that the work required for the implementation of even seeming small parts of gameplay, such as sparks flying off of damaged enemies, required considerable planning and development time. I had the timeline restriction of my NEA submission deadline, which unfortunately did not give me enough time to complete my game. I believe that there were a few other key difficulties that I came across, each with a learning point that I took away.
 
-### Difficulty 1: Misunderstanding of time allocation
+### Difficulty 1: Misunderstanding of Time Allocation
 I had neither made a rendering or game engine before. I had a rough understanding of how much time individual features should take to implement, but the scope of the project grew uncontrollably as I discovered new features that I hadn't yet considered as necessary.
 ### Solution 1:
 I now realise the importance of tools such as use-case/activity diagrams, as well as writing comprehensive and robust requirements. A development methodology other than RAD, such as Agile, would help considerably in budgeting time and keeping track of my progress.
-### Difficulty 2: Misunderstanding of technologies
+### Difficulty 2: Misunderstanding of Technologies
 I had never created a physics engine before. Once I had realised that AABB and Sphere collisions were not enough for satisfying level design it was too late. There are many other cases where I discovered a simple implementation or technique to be unsuitable far too late.
 ### Solution 2:
 I am now much more proactive in researching what approaches have already been used in problems similar to my own. For instance, I am aware of how [Binary Space Partitioning](https://en.wikipedia.org/wiki/Binary_space_partitioning) (notably used in [Quake](https://quake.zone/tutorials/?id=118)) would have been a considerably better solution to implement, and that there are many cases where ready-made libraries should be used, such as [Bullet Physics](https://github.com/bulletphysics/bullet3). Moreover, I am aware that prototyping of individual features can help me gauge their viability before committing to them.
+### Difficulty 3: Misunderstanding of Direction
+I was trying to do too much at once. Since I enjoy the artistic and technical sides of creating games, I found it myself torn between what to focus on. This led to me flip-flopping and making far too many assets and visual effects than should be necessary. These were also made when the renderer and game engine were incomplete, resulting in work that became incompatible with engine as it developed. For example, I had made multiple versions of assets based on changes in light conditions. These assets were tied to a feature that I abandoned due to time restraints.
+### Solution 3:
+I now understand the my personal tendency to try to apply polish too early. Since this project I have firmly restricted myself to using pre-made placeholders. As well, I purposefully make a distinction between code that effects the whole program, and code that effects user interactions. This helps me to build a firm foundation for my projects before worrying about insignificant details. 
