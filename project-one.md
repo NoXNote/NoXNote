@@ -116,3 +116,9 @@ The player is able to [switch between weapons](https://github.com/NoXNote/Public
 The player has separate pools for health, shields, and ammo. These can be [recovered over time](https://github.com/NoXNote/PublicTerminus/blob/7be432fa7488a52bbb5f260c82cce51765105949/src/systems/rengb_player_system.cpp#L447-L454) or [through pickups](https://github.com/NoXNote/PublicTerminus/blob/7be432fa7488a52bbb5f260c82cce51765105949/src/systems/rengb_pickup_system.cpp). These are displayed to the player through an [interface that occupies 3D space](https://github.com/NoXNote/PublicTerminus/blob/7be432fa7488a52bbb5f260c82cce51765105949/src/systems/rengb_gui_system.cpp).
 
 ## What I learned
+The purpose of this project was to learn, with a side goal of created an entertaining experience. I quickly discovered that the work required for the implementation of even seeming small parts of gameplay, such as sparks flying off of damaged enemies, required considerable planning and development time. I had the timeline restriction of my NEA submission deadline, which unfortunately did not give me enough time to complete my game. I believe that there were a few other key difficulties that I came across, each with a learning point that I took away.
+
+### Difficulty 1: Misunderstanding of time allocation
+I had neither made a rendering or game engine before. I had a rough understanding of how much time individual features should take to implement, but the scope of the project grew uncontrollably as I discovered new features that I hadn't yet considered as necessary.
+### Solution 1:
+I now realise the importance of tools such as use-case/activity diagrams, as well as writing comprehensive and robust requirements. A development methodology other than RAD, such as Agile, would help considerably in budgeting time and keeping track of my progress.
