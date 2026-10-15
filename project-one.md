@@ -37,9 +37,13 @@ The system seemed to respond really well to showing the change in motion when mo
 
 I had found a [great paper](https://www.cs.cmu.edu/~kmcrane/Projects/HeatMethod/) describing a cutting edge method of shortest path determination. In the same way that a hot pin spreads heat radially through a surface it is in contact with, a numeric value of heat is given to all points on a surface centred on a point. Having done that calculation once, you are then able to trace back a short path to the origin of the heat from anywhere on the surface. This method is able to handle any manner of shaped surface, and scales fantastically as you increase the number of entities searching for the shortest path. What I liked the most about this method was that the accuracy of the shortest path hardly degraded as you reduced the amounts of calculations used. The only real difference between the true shortest path and a less accurate approximation was an amount of looseness in any turns that would be required.
 
-![A Broken Humanoid Animation](./heat.png)
+![Figure 14](./heat.png)
 
 *Figure 14 from "The Heat Method for Distance Computation"*
+
+![Shortest path being traced by vases](./pathing.png)
+
+*Shortest path being traced by vases*
 
 The bottom two images show a difference in timestep used. While a small timestep provides an accurate shortest path, a larger timestep has the added benefit of a more natural trajectory.
 
