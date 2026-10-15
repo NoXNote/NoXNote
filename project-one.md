@@ -71,9 +71,10 @@ Each room had these details saved in the JSON format. These were created through
 
 ![Persistence of level data](./levels2.gif)
 
-*Persistence of level data*
-
+*Persistence of state of room on reload*
 
 ## Entity Component System
+
+A robust ECS is the backbone of a good game engine. Gameplay emerges from the interactions between player controlled and autonomous entities. I required a system that allowed me to define attributes and behaviours per entity, while maintaining efficient use of memory and development time. I found [Austin Morlan](https://austinmorlan.com/)'s ["A Simple Entity Component System"](https://austinmorlan.com/posts/entity_component_system/) resource an invaluable jumping off point. Once I understood and implemented his solution, I was able to create systems to manage the behaviour of any number of entities. 
 
 ## What I learned
