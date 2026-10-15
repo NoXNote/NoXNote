@@ -41,6 +41,8 @@ I had found a [great paper](https://www.cs.cmu.edu/~kmcrane/Projects/HeatMethod/
 
 *Figure 14 from "The Heat Method for Distance Computation"*
 
+The bottom two images show a difference in timestep used. While a small timestep provides an accurate shortest path, a larger timestep has the added benefit of a more natural trajectory.
+
 ## Level Generation
 
 ## Terrain Deformation
