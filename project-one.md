@@ -35,7 +35,9 @@ The system seemed to respond really well to showing the change in motion when mo
 
 ## Pathfinding System
 
-I had found a [great paper](https://www.cs.cmu.edu/~kmcrane/Projects/HeatMethod/) describing a cutting edge method of shortest path determination. In the same way that a hot pin spreads heat radially through a surface it is in contact with, a numeric value of heat is given to all points on a surface centred on a point. Having done that calculation once, you are then able to trace back a short path to the origin of the heat from anywhere on the surface. This method is able to handle any manner of shaped surface, and scales fantastically as you increase the number of entities searching for the shortest path. What I liked the most about this method was that the accuracy of the shortest path hardly degraded as you reduced the amounts of calculations used. The only real difference between the true shortest path and a less accurate approximation was an amount of looseness in any turns that would be required.
+I had found a [great paper](https://www.cs.cmu.edu/~kmcrane/Projects/HeatMethod/) describing a cutting edge method of shortest path determination. In the same way that a hot pin spreads heat radially through a surface it is in contact with, a [numeric value of heat is given to all points on a surface centred on a point](https://github.com/NoXNote/PublicTerminus/blob/7be432fa7488a52bbb5f260c82cce51765105949/src/systems/rengb_traversal_system.cpp#L219-L237). Having done that calculation once, you are then able to [trace back a short path to the origin of the heat from anywhere on the surface](https://github.com/NoXNote/PublicTerminus/blob/7be432fa7488a52bbb5f260c82cce51765105949/src/systems/rengb_traversal_system.cpp#L238-L278). The player's movement is not constrained to the mesh that the enemies use for traversal. This means that any time a new distance map needs to be built, the closest vertex to the player needs to be determined. I found that using an [AABB tree](https://github.com/NoXNote/PublicTerminus/blob/7be432fa7488a52bbb5f260c82cce51765105949/src/systems/rengb_traversal_system.cpp#L318-L326) was the best way to accelerate this calculation.
+
+The heat method is able to handle any manner of shaped surface, and scales fantastically as you increase the number of entities searching for the shortest path. What I liked the most about this method was that the accuracy of the shortest path hardly degraded as you reduced the amounts of calculations used. The only real difference between the true shortest path and a less accurate approximation was an amount of looseness in any turns that would be required.
 
 ![Figure 14](./heat.png)
 
@@ -49,6 +51,8 @@ The bottom two images show a difference in timestep used. While a small timestep
 
 The system is able to correctly avoid generating a path down and through the pit, except in cases where it is truly the shortest path.
 
+## Terrain Deformation
+
 ## Level Generation
 
-## Terrain Deformation
+
