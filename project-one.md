@@ -16,16 +16,19 @@ Humanoid entities use a [Super Shader](https://github.com/NoXNote/PublicTerminus
 ![A Broken Humanoid Animation](./BrokenAnim.gif)
 
 *A Broken Humanoid Animation*
+
 There was a large element of trial and error in getting the animations to feel natural. 
 
 ![Humanoid Turning in a Run](./TurningRun.gif)
 
 *Humanoid Turning in a Run*
+
 I managed to get a pretty decent system in for managing turning. Sadly my path-finding solution doesn't show off this nuance of my animation shader.
 
 ![Humanoid Running Forward and Back](./RunForwardBack.gif)
 
 *Humanoid Running Forward and Back*
+
 The system seemed to respond really well to showing the change in motion when moving from walking to running. The animation isn't that good for low speeds, but a brisk walk and upwards seemed to look great.
 
 
