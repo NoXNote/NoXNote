@@ -41,11 +41,13 @@ I had found a [great paper](https://www.cs.cmu.edu/~kmcrane/Projects/HeatMethod/
 
 *Figure 14 from "The Heat Method for Distance Computation"*
 
-![Shortest path being traced by vases](./pathing.png)
+The bottom two images show a difference in timestep used. While a small timestep provides an accurate shortest path, a larger timestep has the added benefit of a more natural trajectory.
+
+![Shortest path being traced by vases](./pathing.gif)
 
 *Shortest path being traced by vases*
 
-The bottom two images show a difference in timestep used. While a small timestep provides an accurate shortest path, a larger timestep has the added benefit of a more natural trajectory.
+The system is able to correctly avoid generating a path down and through the pit, except in cases where it is truly the shortest path.
 
 ## Level Generation
 
