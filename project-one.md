@@ -8,6 +8,10 @@ I wanted to make a first person shooter, but wasn't satisfied with how 3D game e
 
 Terminus used the then standard, but now legacy, rendering method of Render Passes. This involved a severe amount of boilerplate code required to render even one triangle, so I spring-boarded my project off the back of [Brendan Galea](https://www.youtube.com/@BrendanGalea)'s fantastic [Vulkan Game Engine Tutorial series](https://www.youtube.com/playlist?list=PL8327DO66nu9qYVKLDmdLW_84-yE4auCR). I essentially followed it line by line up to where he started introducing specular lighting and texturing, at which point I felt confident enough to start building my own features. 
 
+## Summary of what I made
+1. A render system using the Vulkan API. OBJs with pre-baked lighting are loaded, and shaded using variable-rate shading frequency. Several pipelines are used for situations demanding different shading/vertex positioning.
+2. A game engine written from scratch in C++. I made all 3D assets, the physics/collision engine, the level generation algorithm, the GPU driven procedural animation system, and the sound effect system. 
+
 ## Animation System
 
 The most significant part feature implemented was my procedural pseudo-skeletal animation system. I did not need the versatility of fully fleshed skeletal rigs and hand made animations, which allowed me to define animations via mathematical functions. A humanoid's walk cycle is largely cyclical in nature, so I was able to map motions found in walking/running to the various trigonometric functions. For instance, the swinging of an arm is able to be represented by a rotation [modulated by a sin-wave](https://github.com/NoXNote/PublicTerminus/blob/7be432fa7488a52bbb5f260c82cce51765105949/shaders/enemy/enemy.vert#L122).
