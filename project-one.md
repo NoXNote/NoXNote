@@ -6,11 +6,15 @@ title: Terminus, Vulkan Renderer/Game Engine
 # Terminus, Vulkan Renderer/Game Engine
 I wanted to make a first person shooter, but wasn't satisfied with how 3D game engines demanded you used their bespoke approach to managing a 3D environment. I felt learning just one game engine was counterproductive to my learning, as in the short term I would be wasting time wresting with UI and in the long term I'd be pigeonholed into a potentially restrictive or superseded set of tools. This led me to decide to learn the fundamentals of 3D and game engine programming, and I put that learning into practice through my game: [Terminus](https://github.com/NoXNote/PublicTerminus).
 
-Terminus used the then standard, but now legacy, rendering method of Render Passes. This involved a severe amount of boilerplate code required to render even one triangle, so I spring-boarded my project off the back of [Brendan Galea](https://www.youtube.com/@BrendanGalea)'s fantastic [Vulkan Game Engine Tutorial series](https://www.youtube.com/playlist?list=PL8327DO66nu9qYVKLDmdLW_84-yE4auCR). I essentially followed it line by line up to where he started introducing specular lighting and texturing, at which point I felt confident enough to start building my own features. 
+Now that I am comfortable with the fundamentals of 3D programming and the workings of game engines, I am much more comfortable with using Unity, Unreal, and Godot. My many other smaller projects/game jams/coursework use these engines, and I find that I now appreciate each of their quirks as opposed to being blindly frustrated by them. With the knowledge I have now, I would have done many, many things differently. However, I still deeply value the time I had working to create something as ambitious as a game engine from a baseline of near zero knowledge.
 
-## Summary of what I made
+## A Summary of what I made
 1.  A render system using the Vulkan API. OBJs with pre-baked lighting are loaded, and shaded using variable-rate shading frequency. Several pipelines are used for situations demanding different shading/vertex positioning.
 2.  A game engine written from scratch in C++. I made all 3D assets, the physics/collision engine, the level generation algorithm, the GPU driven procedural animation system, the enemy AI, and the game serialisation/deserialisation system.
+
+## Rendering
+
+Terminus used the then standard, but now legacy, rendering method of Render Passes. This involved a severe amount of boilerplate code required to render even one triangle, so I spring-boarded my project off the back of [Brendan Galea](https://www.youtube.com/@BrendanGalea)'s fantastic [Vulkan Game Engine Tutorial series](https://www.youtube.com/playlist?list=PL8327DO66nu9qYVKLDmdLW_84-yE4auCR). I essentially followed it line by line up to where he started introducing specular lighting and texturing, at which point I felt confident enough to start building my own features. For the most part, each entity is managed by a system which includes all pipeline management and drawing logic.
 
 ## Animation System
 
@@ -84,5 +88,15 @@ A robust ECS is the backbone of a good game engine. Gameplay emerges from the in
 ## Collision System
 
 Using Newton's laws of restitution, as well as help from [internet resources](https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_collision_detection), I was able to define my own rudimentary collision detection and restitution system. Each entity with a collision attribute would contain data on their mass and coefficient of restitution. By using [multiple dispatch and C++'s std::variant visitation](https://github.com/NoXNote/PublicTerminus/blob/7be432fa7488a52bbb5f260c82cce51765105949/src/systems/rengb_collision_system.cpp#L319-L360) feature, I was able to define behaviours for intersection between [AABBs](https://github.com/NoXNote/PublicTerminus/blob/7be432fa7488a52bbb5f260c82cce51765105949/src/systems/rengb_collision_system.cpp#L243-L276), [points](https://github.com/NoXNote/PublicTerminus/blob/7be432fa7488a52bbb5f260c82cce51765105949/src/systems/rengb_collision_system.cpp#L282-L315), and [spheres](https://github.com/NoXNote/PublicTerminus/blob/7be432fa7488a52bbb5f260c82cce51765105949/src/systems/rengb_collision_system.cpp#L147-L168) without having to worry about redundant code or runtime overhead.
+
+## Gameplay
+
+I created a player movement system that facilitates running, jumping and crouching. These behaviours can intersect with each other.
+
+The player is able to aim down sights, shoot, hit enemies to produce sparks, and break the enemy into pieces.
+
+The player is able to switch between weapons, each with their own unique purpose.
+
+The player has separate pools for health, shields, and ammo. These can be recovered over time or through pickups. These are displayed to the player through and interface that occupies 3D space.
 
 ## What I learned
