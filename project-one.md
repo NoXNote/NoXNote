@@ -53,13 +53,16 @@ The system is able to correctly avoid generating a path down and through the pit
 
 ## Terrain Deformation
 
-I wanted the destruction of enemies to gradually alter the level geometry. I found that keeping hundreds of models and colliders within the play area to be inefficient, so I made destroyed enemies part unload after a set time. On unload, they would contribute a small elevation increase to a mesh separate to the level geometry itself. Each change in elevation would also alter a sphere collider given to each area of elevation, ensuring that the player would be able to smoothly move over the raised areas.
+I wanted the destruction of enemies to gradually alter the level geometry. I found that keeping hundreds of models and colliders within the play area to be inefficient, so I made destroyed enemies part [unload after a set time](https://github.com/NoXNote/PublicTerminus/blob/7be432fa7488a52bbb5f260c82cce51765105949/src/systems/rengb_detritus_system.cpp#L52-L56). [On unload](https://github.com/NoXNote/PublicTerminus/blob/7be432fa7488a52bbb5f260c82cce51765105949/src/systems/rengb_detritus_system.cpp#L30), they would [contribute a small elevation](https://github.com/NoXNote/PublicTerminus/blob/7be432fa7488a52bbb5f260c82cce51765105949/src/systems/rengb_traversal_system.cpp#L328-L351) increase to a mesh separate to the level geometry itself. Each change in elevation would also alter a sphere collider given to each area of elevation, ensuring that the player would be able to smoothly move over the raised areas.
 
 ![Rubble made from Enemies](./rubble.gif)
 
 *Rubble made from Enemies*
 
 ## Level Generation
+
+There are many ways to manage creating a level. How rooms are connected can affect difficulty and replayability, and a balance needs to be made between how handmade v.s. procedural your levels are. Using a similar resource to this I found that Recursive Backtracking suited my needs, while being simple to implement. I made a variation on it, in that each cell would have a defined number of potential exits, with each exit having a defined number of rooms that it could lead to. For example, a large room will have multiple exits in the form of corridors, while a boss fight entrance entrance room can only lead to the boss arena room. Different probabilities of appearance can be mapped to each type of room, ensuring a balance between difficulties of encounters and allowing for some helpful rooms to appear during gameplay. When a hard coded base-case is reached (a path has gone on for too long), the algorithm is able to backtrack until it reaches the last branch it made and continue generating paths.
+
 
 ## Entity Component System
 
