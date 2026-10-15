@@ -53,6 +53,14 @@ The system is able to correctly avoid generating a path down and through the pit
 
 ## Terrain Deformation
 
+I wanted the destruction of enemies to gradually alter the level geometry. I found that keeping hundreds of models and colliders within the play area to be inefficient, so I made destroyed enemies part unload after a set time. On unload, they would contribute a small elevation increase to a mesh separate to the level geometry itself. Each change in elevation would also alter a sphere collider given to each area of elevation, ensuring that the player would be able to smoothly move over the raised areas.
+
+![Rubble made from Enemies](./rubble.gif)
+
+*Rubble made from Enemies*
+
 ## Level Generation
 
+## Entity Component System
 
+## What I learned
