@@ -129,4 +129,6 @@ I am now much more proactive in researching what approaches have already been us
 ### Difficulty 3: Misunderstanding of Direction
 I was trying to do too much at once. Since I enjoy the artistic and technical sides of creating games, I found it myself torn between what to focus on. This led to me flip-flopping and making far too many assets and visual effects than should be necessary. These were also made when the renderer and game engine were incomplete, resulting in work that became incompatible with engine as it developed. For example, I had made multiple versions of assets based on changes in light conditions. These assets were tied to a feature that I abandoned due to time restraints.
 ### Solution 3:
-I now understand the my personal tendency to try to apply polish too early. Since this project I have firmly restricted myself to using pre-made placeholders. As well, I purposefully make a distinction between code that effects the whole program, and code that effects user interactions. This helps me to build a firm foundation for my projects before worrying about insignificant details. 
+I now understand the my personal tendency to try to apply polish too early. Since this project I have firmly restricted myself to using pre-made placeholders. As well, I purposefully make a distinction between code that effects the whole program, and code that effects user interactions. This helps me to build a firm foundation for my projects before worrying about surface details.
+
+
