@@ -1,12 +1,9 @@
 ---
 layout: default
-title: Project Two
+title: Game Jam Submissions
 ---
 
-# Project One
+# Game Jam Submissions
 
-Here is the background, code snippets, and details for Project Two.
+These are all hosted on my Itch.io page.
 
-```python
-# Example code block from your old project
-print("Hello, GitHub Pages!")
