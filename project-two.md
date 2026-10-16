@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Game Jam Submissions
+title: Bez, Mask Game Jam 
 ---
 
 # Game Jam Submissions
 
-These are all hosted on my Itch.io page.
-
+These are all hosted on my [Itch.io page.
+](https://nonote.itch.io/)
 ## Bez
 
 ![Bezier Portal showing Mirroring](./portals2.gif)
