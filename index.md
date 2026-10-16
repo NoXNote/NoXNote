@@ -18,4 +18,6 @@ I hope that you enjoy what you see. If you don't, check in later and I'll likely
 ## Projects
 
 * **[Terminus](./project-one.md)**, a Vulkan Renderer/Game Engine
-* **[Game Jams](./project-two.md)**
+* **[Bez](./project-two.md)**, a Mask Game Jam
+* **[Don't Hit Me!](./project-three.md)**, a Cards Game Jam
+* **[Petril](./project-four.md)**, a Crypto Game Jam
